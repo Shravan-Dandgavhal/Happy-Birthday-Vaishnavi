@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Vaishnavi 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+background:linear-gradient(135deg,#f8cdda,#d1c4e9);
+font-family:'Poppins',sans-serif;
+color:#4a2c5b;
+overflow-x:hidden;
+}
+
+.container{
+max-width:1000px;
+margin:auto;
+padding:20px;
+text-align:center;
+}
+
+h1{
+font-family:'Pacifico',cursive;
+font-size:clamp(2.2rem,6vw,3.2rem);
+color:#ff5fa2;
+animation:fadeInDown 2s ease;
+}
+
+h2{
+font-family:'Playfair Display',serif;
+margin-top:10px;
+font-size:clamp(1.4rem,4.5vw,1.8rem);
+color:#6a1b9a;
+}
+
+.age{
+margin-top:5px;
+font-size:1.1rem;
+color:#e91e63;
+font-weight:600;
+}
+
+#countdown{
+margin-top:10px;
+font-size:1.2rem;
+color:#e91e63;
+}
+
+.subtitle{
+margin-top:15px;
+font-size:clamp(1rem,3.8vw,1.1rem);
+color:#6d4c7d;
+}
+
+.pet-names{
+margin-top:20px;
+font-style:italic;
+color:#ad4aa6;
+}
+
+.card{
+background:rgba(255,255,255,0.88);
+border-radius:20px;
+padding:clamp(20px,5vw,30px);
+margin-top:40px;
+box-shadow:0 20px 40px rgba(0,0,0,0.1);
+animation:float 4s ease-in-out infinite;
+}
+
+.card p{
+font-size:clamp(0.95rem,3.5vw,1.05rem);
+line-height:1.8;
+margin-bottom:15px;
+}
+
+.flirty{color:#e91e63;font-weight:500}
+
+.gallery{margin-top:50px}
+.gallery h2{margin-bottom:20px}
+
+.photos{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:15px;
+}
+
+.photo-box{
+width:100%;
+height:180px;
+border-radius:15px;
+object-fit:cover;
+border:3px solid #f8bbd0;
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+transition:transform 0.4s ease;
+cursor:pointer;
+}
+
+.photo-box:hover{
+transform:scale(1.05);
+}
+
+.letter-btn{
+margin-top:50px;
+padding:15px 35px;
+font-size:1.1rem;
+border:none;
+border-radius:30px;
+cursor:pointer;
+background:linear-gradient(135deg,#ff80ab,#b388ff);
+color:white;
+}
+
+.overlay{
+position:fixed;
+top:0;left:0;
+height:100vh;width:100vw;
+background:rgba(0,0,0,0.6);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:100;
+padding:20px;
+}
+
+.letter{
+background:#fff;
+padding:35px;
+max-width:600px;
+width:100%;
+border-radius:20px;
+max-height:85vh;
+overflow-y:auto;
+animation:zoomIn 0.8s ease;
+}
+
+.letter h3{
+font-family:'Pacifico',cursive;
+color:#ff4081;
+margin-bottom:15px;
+}
+
+.close{
+margin-top:20px;
+cursor:pointer;
+font-weight:600;
+color:#7b1fa2;
+}
+
+/* Fullscreen Image */
+#imgOverlay{
+position:fixed;
+top:0;left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.85);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:200;
+}
+
+#imgOverlay img{
+max-width:90%;
+max-height:90%;
+border-radius:20px;
+}
+
+/* Floating Hearts */
+.heart{
+position:fixed;
+bottom:-20px;
+font-size:22px;
+animation:rise 6s linear infinite;
+opacity:0.8;
+}
+
+/* Confetti */
+.confetti{
+position:fixed;
+top:-10px;
+width:10px;
+height:10px;
+opacity:0.8;
+pointer-events:none;
+}
+
+@keyframes fadeInDown{
+from{opacity:0;transform:translateY(-40px)}
+to{opacity:1;transform:translateY(0)}
+}
+@keyframes float{
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(-10px)}
+}
+@keyframes zoomIn{
+from{transform:scale(0.7);opacity:0}
+to{transform:scale(1);opacity:1}
+}
+@keyframes rise{
+0%{transform:translateY(0)}
+100%{transform:translateY(-100vh);opacity:0}
+}
+@keyframes confettiFall{
+to{transform:translateY(100vh) rotate(360deg)}
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🎵 Background Music -->
+<audio id="bgMusic" autoplay loop>
+<source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_cfd1a4f48c.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+
+<h1>Happy Birthday Vaishnavi 🎂💖✨</h1>
+<h2>25 • 02 • 2026 🎀</h2>
+<div class="age">Turning 19 🎉💫</div>
+<div id="countdown"></div>
+
+<p class="subtitle">
+To the girl who brings calm 🕊️, chaos 😜, laughter 😂  
+and comfort 🤍 — all at once ✨🧿
+</p>
+
+<div class="pet-names">
+a.k.a. <b>Bhoota 👻 | Madam 🩵 | Chotu Don 😎💥</b>
+</div>
+
+<div class="card">
+<p>
+Happy Birthday to the <span class="flirty">most precious soul</span> 💗🌸  
+You’re not just a bestie, you’re a feeling 💞
+</p>
+
+<p>
+Time with you gives me peace 🕊️  
+Laughing with you 😂, sharing silence 🤍, sharing sadness 💭 —  
+every moment with you becomes <span class="flirty">magical ✨</span>
+</p>
+
+<p>
+You make bad days lighter ☁️, good days brighter 🌈,  
+and somehow… you always know how to make me smile 😊💖
+</p>
+</div>
+
+<!-- Existing Gallery -->
+<div class="gallery">
+<h2>Our Cute Memories 📸💫</h2>
+<div class="photos">
+<img src="https://drive.google.com/thumbnail?id=181i1HOiHyZ1pTQMJju8Uzd1qVq15wvox&sz=w1000" class="photo-box" onclick="openImg(this.src)">
+<img src="https://drive.google.com/thumbnail?id=1Jh7jyyOq511VYTm8Yw3jmrTRW4N7D5vt&sz=w1000" class="photo-box" onclick="openImg(this.src)">
+<img src="https://drive.google.com/thumbnail?id=1oxXErSnahZ5GnH1RT8xSr9pxure1UW2Z&sz=w1000" class="photo-box" onclick="openImg(this.src)">
+<img src="https://drive.google.com/thumbnail?id=1mlJQFYJjHJ43LN9uVR-fW4QOP1NPPp73&sz=w1000" class="photo-box" onclick="openImg(this.src)">
+</div>
+</div>
+
+<!-- 🌸 NEW SECTION ONLY -->
+<div class="gallery">
+<h2>Her Childhood Memories 🧸🌈</h2>
+<div class="photos">
+<img src="https://drive.google.com/thumbnail?id=1kgc13Zz1hIznZDdlJL49wbaNkabFlY5y&sz=w1000" class="photo-box" onclick="openImg(this.src)">
+<img src="https://drive.google.com/thumbnail?id=1F-KkYypqrgAEqUgU8M8L7j1V-D46Hf-s&sz=w1000" class="photo-box" onclick="openImg(this.src)">
+<img src="https://drive.google.com/thumbnail?id=1K6Z55m-nUNSHcYnXKO7y-Wsakhx2NScr&sz=w1000" class="photo-box" onclick="openImg(this.src)">
+<img src="https://drive.google.com/thumbnail?id=1KX-u0615j0NYP9O3OrQR5kFMX1AbYdd_&sz=w1000" class="photo-box" onclick="openImg(this.src)">
+</div>
+</div>
+
+<button class="letter-btn" onclick="openLetter()">Open My Letter 💌🥹</button>
+
+</div>
+
+<div class="overlay" id="overlay">
+<div class="letter">
+<h3>Dear Vaishnavi 💖🌸</h3>
+<p>You are one of the most beautiful chapters of my life 📖💫</p>
+<p>I laughed with you 😂, shared my sadness 💭, and felt peace 🕊️</p>
+<p>What we share is pure friendship wrapped in love 💞✨</p>
+<p>Always stay the same 💗</p>
+<div class="close" onclick="closeLetter()">Close 💕</div>
+</div>
+</div>
+
+<div id="imgOverlay" onclick="closeImg()">
+<img id="fullImg">
+</div>
+
+<script>
+document.body.addEventListener("click",()=>{
+document.getElementById("bgMusic").play()
+},{once:true});
+
+setInterval(()=>{
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="💖";
+h.style.left=Math.random()*100+"vw";
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),7000);
+},600);
+
+setInterval(()=>{
+let c=document.createElement("div");
+c.className="confetti";
+c.style.left=Math.random()*100+"vw";
+c.style.background=["#ff5fa2","#b388ff","#ffd6e8","#fff"][Math.floor(Math.random()*4)];
+c.style.animation="confettiFall 4s linear forwards";
+document.body.appendChild(c);
+setTimeout(()=>c.remove(),5000);
+},200);
+
+function openLetter(){overlay.style.display="flex"}
+function closeLetter(){overlay.style.display="none"}
+
+function openImg(src){
+imgOverlay.style.display="flex";
+fullImg.src=src;
+}
+function closeImg(){imgOverlay.style.display="none"}
+
+const birthday=new Date("2026-02-25T00:00:00").getTime();
+setInterval(()=>{
+let diff=birthday-new Date().getTime();
+if(diff<=0){countdown.innerHTML="🎉 It's Your Birthday! 🎉";return;}
+let d=Math.floor(diff/(1000*60*60*24));
+let h=Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+let m=Math.floor((diff%(1000*60*60))/(1000*60));
+let s=Math.floor((diff%(1000*60))/1000);
+countdown.innerHTML=`🎈 Countdown: ${d}d ${h}h ${m}m ${s}s`;
+},1000);
+</script>
+
+</body>
+</html>
